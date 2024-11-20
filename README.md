@@ -4,7 +4,7 @@
 
 Start by including ISE in your project:  
 ```html
-<script src="https://ise.web.app"></script>
+<script src="https://ise.web.app/load.js"></script>
 ```
 
 ---
@@ -105,10 +105,6 @@ These special elements simplify app building.
 - **`out`**: Dynamic output.  
   ```html
   <out>Dynamic Output Here</out>
-  ```
-- **`loaf`**: A notification box.  
-  ```html
-  <loaf>Alert: Message sent successfully!</loaf>
   ```
 - **`style`**: Adds custom CSS.  
   ```html
