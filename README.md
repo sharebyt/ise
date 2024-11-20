@@ -10,6 +10,11 @@ Start by including ISE in your project:
 <script src="https://ise.web.app/load.js"></script>
 ```
 
+Only The UI
+```html
+<link rel='stylesheet' href='https://ise.web.app/load.css'>
+```
+
 ---
 
 ## **Ways to Interact**  
@@ -166,8 +171,10 @@ Examples:
   ```html
   <bon mid-pt>This box has mid padding at the top.</bon>
   ```
+  
 Corner Sizes:
-'5' 5% | '10' 10% | '15' 15% | '25' 25% | '50' 50% 
+`5` 5% | `10` 10% | `15` 15% | `25` 25% | `50` 50% 
+
 - Corner:  
 ```html
 <bon bdr="15">This box has mid padding at the top.</bon>
