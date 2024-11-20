@@ -5,7 +5,7 @@ ISE is a language for building interactive web apps quickly, with easy-to-use el
 Start by including ISE in your project:
 
 <script src="https://ise.web.app/load.js"></script>
-<link rel='stylesheet' href='https://ise.web.app/load.css'>
+<link rel='stylesheet' href='https://ise.web.app/load.css'>                -- Only UI
 
 Ways to Interact
 
