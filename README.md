@@ -51,9 +51,9 @@ bon("#header").text = "Welcome to ISE!";
 ### **`bon.add(tag)`**  
 Makes something new, like a button or text.  
 ```javascript
-const newDiv = bon.add("div");
-newDiv.text = "Hello, World!";
-bon("#body").put(newDiv);
+const mybon = bon.add();
+mybon.text = "Hello, World!";
+dom("#body").put(mybon);
 ```
 
 ### **`.put(content)`**  
@@ -65,8 +65,8 @@ bon("#container").put("Here is new content.");
 ### **`.at(attribute, value)`**  
 Adds or modifies attributes for a Bon.  
 ```javascript
-bon("#box").at("hidden"); // Hides the box
-bon("#box").at("class", "highlight"); // Adds a class to the box
+bon("#box").at("hide");
+bon("#box").at("rbg"); 
 ```
 
 ### **`.text`**  
