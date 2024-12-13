@@ -3,7 +3,8 @@ updated ISE documentation in Markdown format, reflecting the changes
 
 # ISE (Interface Style Enliner) Documentation
 
-ISE is a language for building interactive web apps quickly, with easy-to-use elements and attributes. **Do not use JavaScript**. We use our own system which is different from normal JS.
+ISE is a language for building interactive web apps quickly, with easy-to-use elements and attributes.
+ISE different from vanilla JS.
 
 Always include ISE in your project:
 
