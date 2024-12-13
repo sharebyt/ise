@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://ise.web.app/load/l.css">
 updated ISE documentation in Markdown format, reflecting the changes 
 
 # ISE (Interface Style Enliner) Documentation
