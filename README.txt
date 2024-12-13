@@ -1,72 +1,95 @@
-ISE (Interface Style Enliner) 
-is a language for building interactive web to apps quickly, with easy-to-use elements and attributes. 
+                ISE (Interface Style Enliner) Documentation
+   ________________________________________________________________
 
-Do not use js. we are different to normal JS we use our own system.
+    ISE is a language for building interactive web apps quickly, with
+    easy-to-use elements and attributes. 
 
-Always by including ISE in your project:
-  
-<script src="https://ise.web.app/load/l.js"></script> <-- CDN (MUST)
+    Do not use JavaScript. We are different from normal JS as we use our own system.
 
-<link rel='stylesheet' href='https://ise.web.app/load/l.css'>  <-- UI (Optional but better to put.)
+    Always include ISE in your project:
 
-Element:
+    <script src="https://ise.web.app/load/l.js"></script>  <-- CDN (MUST)
+    <link rel='stylesheet' href='https://ise.web.app/load/l.css'>  <-- UI (Optional but better to put.)
 
-<see>  <-- Screen in the App
+------------------------------------------------------------------
 
-<say> <-- Say text in the App
-<ask> <-- Ask input in the App | All data here is auto save 
-<row> <-- Row in the App
-<cam> <-- Camera Display in the App
-<bon> <-- Fluffy Box for the App
-<app> <-- Creates a App Settings Container Element
+                  Elements in ISE:
 
-<see pop='COLOR' <-- Sets Global Pop Color in the App
-min='COLOR' <-- Sets Global Mint Color in the App
+    <see>        <-- Screen in the App
+    <say>        <-- Say text in the App
+    <ask>        <-- Ask input in the App | All data here is auto-saved
+    <row>        <-- Row in the App
+    <cam>        <-- Camera Display in the App
+    <bon>        <-- Fluffy Box for the App
+    <app>        <-- Creates an App Settings Container Element
 
-Attribute in Element:
+------------------------------------------------------------------
 
-<? pop> <-- Make it a Pop Color
-<? Min> <-- Make it a Mint Color
+                  Element Attributes:
 
-<? go='URL'> <-- Redirect to URL When tapped
-<? do='URL'> <-- Runs JS When tapped or typed to it.
-<? save='mydata' file='txt'> <-- Creates a File with data of `<ask>` That is selected.
-<? upload='mydata'> <-- Uploads File data to `<ask>` That is selected.
+    <see pop='COLOR'>       <-- Sets Global Pop Color in the App
+    <see min='COLOR'>       <-- Sets Global Mint Color in the App
 
-<? Put your colors> 
+    <? pop>                 <-- Make it a Pop Color
+    <? min>                 <-- Make it a Mint Color
+    <? go='URL'>            <-- Redirect to URL when tapped
+    <? do='URL'>            <-- Runs JS when tapped or typed into it
+    <? save='mydata' file='txt'> <-- Creates a file with data from `<ask>` that is selected
+    <? upload='mydata'>     <-- Uploads file data from `<ask>` that is selected
 
-Colors: [r] Red Cherry [l] Blue Lin [y] Yello Mango [v] Vio Grapes [p] Pink Peach [g] Green Grass [m] Matte White [b] Black
-+[bg] to make it bg 
+------------------------------------------------------------------
 
-<? lbg>
+                      Colors in ISE:
 
-Functionality in <script>:
+    [r] Red Cherry
+    [l] Blue Lin
+    [y] Yellow Mango
+    [v] Violet Grapes
+    [p] Pink Peach
+    [g] Green Grass
+    [m] Matte White
+    [b] Black
 
-ui(1) <-- Start UI |
-bon('ask') <-- Select Element
-bon.add('ask') <-- Makes Element
+    Add +[bg] to make it a background color (e.g., <? lbg>).
 
-hide('#mysc') <-- Toggle Hide
-.at('lbg') <-- Toggle Attribute
-.rem('lbg') <-- Remove Attribute
-.put <-- Put Element as a Child
-.del <-- Remove Element
+------------------------------------------------------------------
 
-server.post <-- Post Data on Server 
-server.put <-- Put Data on Server 
-server.patch <-- Patch Data on Server 
-server.get <-- Get Data from Server 
-server.del <-- Delete Data from Server 
-on.cam  <-- Turn on Camera
-off.cam <-- Turn off Camera
-on.mic <-- Turn on Mic
-off.mic <-- Turn off Mic
+                 Functionality in `<script>`:
 
+    ui(1)                     <-- Start UI
+    bon('ask')                <-- Select Element
+    bon.add('ask')            <-- Makes Element
 
-app.view(); <-- Makes App Responsive and Native
-app.info("My first ISE app"); <-- Makes Seo for AApp Settingspp
-app.key("apple, fruit"); <-- Set's App Settings Keyword
+    hide('#mysc')             <-- Toggle Hide
+    .at('lbg')                <-- Toggle Attribute
+    .rem('lbg')               <-- Remove Attribute
+    .put                      <-- Put Element as a Child
+    .del                      <-- Remove Element
 
-app('My App') <-- Name for App
-app.icon(1) <-- Select Icon for App
-app.cover(1) <-- Select Cover for App
+    server.post               <-- Post Data on Server
+    server.put                <-- Put Data on Server
+    server.patch              <-- Patch Data on Server
+    server.get                <-- Get Data from Server
+    server.del                <-- Delete Data on Server
+    on.cam                    <-- Turn on Camera
+    off.cam                   <-- Turn off Camera
+    on.mic                    <-- Turn on Mic
+    off.mic                   <-- Turn off Mic
+
+------------------------------------------------------------------
+
+                   App Settings Functions:
+
+    app.view();               <-- Makes the App Responsive and Native
+    app.info("My first ISE app"); <-- Sets SEO for App
+    app.key("apple, fruit");  <-- Set App Settings Keywords
+
+    app('My App')             <-- Set Name for App
+    app.icon(1)               <-- Select Icon for App
+    app.cover(1)              <-- Select Cover for App
+
+------------------------------------------------------------------
+
+This documentation serves as an overview of ISE's capabilities for building apps
+using our simplified, like JavaScript + HTML approach. Get started by including ISE, then
+use the provided elements and attributes to build out your app's functionality.
