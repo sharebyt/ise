@@ -1,349 +1,108 @@
+Here’s the updated ISE documentation in Markdown format, reflecting the changes you requested:
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel='stylesheet' href='https://ise.web.app/load.css'>
+```markdown
+# ISE (Interface Style Enliner) Documentation
 
-# ISE (Interface Style Enliner) Documentation  
+ISE is a language for building interactive web apps quickly, with easy-to-use elements and attributes. **Do not use JavaScript**. We use our own system which is different from normal JS.
 
-**ISE** is a language for building interactive web apps quickly. With easy-to-use elements and attributes, you can design and build dynamic apps efficiently. It’s protected by the **WEBOPL** license.
+Always include ISE in your project:
 
-Start by including ISE in your project:  
 ```html
-<script src="https://ise.web.app/load.js"></script>
+<script src="https://ise.web.app/load/l.js"></script>  <!-- CDN (MUST) -->
+<link rel="stylesheet" href="https://ise.web.app/load/l.css">  <!-- UI (Optional but better to put) -->
 ```
 
-Only The UI
+---
+
+## Elements in ISE
+
+- `<see>`: Screen in the App
+- `<say>`: Say text in the App
+- `<ask>`: Ask input in the App (All data here is auto-saved)
+- `<row>`: Row in the App
+- `<cam>`: Camera Display in the App
+- `<bon>`: Fluffy Box for the App
+- `<app>`: Creates an App Settings Container Element
+
+---
+
+## Element Attributes
+
+- `<see pop="COLOR">`: Sets Global Pop Color in the App
+- `<see min="COLOR">`: Sets Global Mint Color in the App
+
+### Colors:
+- **Pop**: `<? pop>`
+- **Mint**: `<? min>`
+- **Redirect**: `<? go="URL">` (Redirect to URL when tapped)
+- **Run JS**: `<? do="URL">` (Runs JS when tapped or typed into it)
+- **Save**: `<? save="mydata" file="txt">` (Creates a file with data from `<ask>` that is selected)
+- **Upload**: `<? upload="mydata">` (Uploads file data from `<ask>` that is selected)
+
+### Color Options:
+- `[r]`: Red Cherry
+- `[l]`: Blue Lin
+- `[y]`: Yellow Mango
+- `[v]`: Violet Grapes
+- `[p]`: Pink Peach
+- `[g]`: Green Grass
+- `[m]`: Matte White
+- `[b]`: Black
+
+To apply as background color, use `+bg`:
+
 ```html
-<link rel='stylesheet' href='https://ise.web.app/load.css'>
+<? lbg
 ```
 
 ---
 
-## **Ways to Interact**  
-### **`ask(message)`**  
-Prompts the user for input.  
-```javascript
-ask("What's your name?").then(name => bon('#body').put(`Hello, ${name}!`));
-```
+## Functionality in `<script>`
 
-### **`say(message)`**  
-Displays a message on the screen.  
-```javascript
-say("Welcome to my app!");
-```
+- `ui(1)`: Start UI
+- `bon('ask')`: Select Element
+- `bon.add('ask')`: Makes Element
 
-### **`clear()`**  
-Clears any messages or prompts.  
-```javascript
-clear();
-```
+### Element Manipulation:
 
----
+- `hide('#mysc')`: Toggle Hide
+- `.at('lbg')`: Toggle Attribute
+- `.rem('lbg')`: Remove Attribute
+- `.put`: Put Element as a Child
+- `.del`: Remove Element
 
-## **Ways to Create Your Bon**  
-A "Bon" is any part of your page you can create, change, or interact with.  
+### Server Functions:
 
-### **`bon(selector)`**  
-Finds something already on your page.  
-```javascript
-bon("#header").text = "Welcome to ISE!";
-```
+- `server.post`: Post Data to Server
+- `server.put`: Put Data to Server
+- `server.patch`: Patch Data on Server
+- `server.get`: Get Data from Server
+- `server.del`: Delete Data from Server
 
-### **`bon.add(tag)`**  
-Makes something new, like a button or text.  
-```javascript
-const mybon = bon.add();
-mybon.text = "Hello, World!";
-dom("#body").put(mybon);
-```
+### Camera and Microphone:
 
-### **`.put(content)`**  
-Adds something inside another Bon.  
-```javascript
-bon("#container").put("Here is new content.");
-```
-
-### **`.at(attribute, value)`**  
-Adds or modifies attributes for a Bon.  
-```javascript
-bon("#box").at("hide");
-bon("#box").at("rbg"); 
-```
-
-### **`.text`**  
-Changes or retrieves the text inside a Bon.  
-```javascript
-bon("#title").text = "Hello!";
-```
+- `on.cam`: Turn on Camera
+- `off.cam`: Turn off Camera
+- `on.mic`: Turn on Microphone
+- `off.mic`: Turn off Microphone
 
 ---
 
-## **ISE Elements**  
-These special elements simplify app building.  
+## App Settings Functions
 
-- **`textarea`**: An input box for user text.  
-  ```html
-  <textarea placeholder="Write here..."></textarea>
-  ```
-- **`a`**: A clickable button.  
-  ```html
-  <a>Click Me</a>
-  ```
-- **`p`**: A text paragraph, also styled like `md` (Markdown).  
-  ```html
-  <p>Welcome to ISE!</p>
-  ```
-- **`bon`**: A fluffy box for any content.  
-  ```html
-  <bon>Hello, Fluffy World!</bon>
-  ```
-- **`row`**: A horizontal layout.  
-  ```html
-  <row>
-    <bon>Item 1</bon>
-    <bon>Item 2</bon>
-  </row>
-  ```
-- **`setup`**: For app initialization.  
-  ```html
-  <setup>Loading...</setup>
-  ```
-- **`md`**: Displays Markdown-style content.  
-  ```html
-  <md># Markdown Header</md>
-  ```
-- **`out`**: Dynamic output.  
-  ```html
-  <out>Dynamic Output Here</out>
-  ```
-- **`style`**: Adds custom CSS.  
-  ```html
-  <style>
-    bon { border: 2px solid black; }
-  </style>
-  ```
-- **`script`**: Embeds JavaScript code.  
-  ```html
-  <script>
-    say("ISE is fun!");
-  </script>
-  ```
+- `app.view()`: Makes the App Responsive and Native
+- `app.info("My first ISE app")`: Sets SEO for the App
+- `app.key("apple, fruit")`: Set App Settings Keywords
+
+### App Customization:
+
+- `app("My App")`: Set Name for App
+- `app.icon(1)`: Select Icon for App
+- `app.cover(1)`: Select Cover for App
 
 ---
 
-## **Attributes (Signs)**  
-
-### **Colors**  
-Set colors for text or backgrounds:  
-- **Black (`b`)**, **Blue (`l`)**, **Red (`r`)**, **Yellow (`y`)**, **Green (`g`)**, **Violet (`v`)**, **Matte White (`m`)**, **Pink (`p`)**.  
-
-Examples:  
-- Set text color:  
-  ```html
-  <p r>This is red text.</p>
-  ```  
-- Background color (`bg`):  
-  ```html
-  <bon bbg>This has a black background.</bon>
-  ```  
-- Dimmed colors: Add `2`.  
-  ```html
-  <bon bbg2>This has a dim black background.</bon>
-  ```
-
----
-
-### **Corners,Spacing (Margins and Padding)**  
-Use margins and padding to control spacing:  
-- **Sizes**: `small`, `mid`, `big`.  
-- **Position**:  
-  - `t` = Top  
-  - `b` = Bottom  
-  - `l` = Left  
-  - `r` = Right
-`m` = Margin All sides  
-`p` = Pad All sides  
-
-Examples:  
-- Margin:  
-  ```html
-  <bon small-m>This box has a small margin.</bon>
-  ```  
-- Padding:  
-  ```html
-  <bon mid-pt>This box has mid padding at the top.</bon>
-  ```
-  
-Corner Sizes:
-`5` 5% | `10` 10% | `15` 15% | `25` 25% | `50` 50% 
-
-- Corner:  
-```html
-<bon bdr="15">This box has mid padding at the top.</bon>
+This documentation provides an overview of how to use ISE to build interactive web apps without JavaScript. Use the elements and attributes to quickly design and implement dynamic features in your app.
 ```
 
----
-
-### **Layout**  
-Arrange elements easily with these options:  
-- Centered: `<row center>`  
-- Left: `<row left>`  
-- Right: `<row right>`  
-- Masonry Layout: `<row masonry>`  
-
-Example:  
-```html
-<row center>
-  <bon>Item 1</bon>
-  <bon>Item 2</bon>
-</row>
-```
-
----
-
-## **Default UI or Set It Your Way**  
-### **`ui()`**  
-Sets up the default UI.  
-```javascript
-ui();
-```
-
-### **`set.cover(imageNumber)`**  
-Sets a background cover image.  
-```javascript
-set.cover(1);
-```
-
-### **`set.icon(iconNumber)`**  
-Changes the page favicon.  
-```javascript
-set.icon(2);
-```
-
-### **`set.title(title)`**  
-Updates the page title.  
-```javascript
-set.title("My App");
-```
-
-### **`set.key(keywords)`**  
-Adds keywords for the page.  
-```javascript
-set.key("ISE, web, app");
-```
-
-### **`set.info(description)`**  
-Updates the page description.  
-```javascript
-set.info("An app built with ISE.");
-```
-
-### **`set.view()`**  
-Optimizes the page for all devices.  
-```javascript
-set.view();
-```
-
----
-
-## **Saving to Storage**  
-### **`save(key, value)`**  
-Stores data locally.  
-```javascript
-save("user", "John");
-```
-
-### **`save.load(key)`**  
-Retrieves stored data.  
-```javascript
-bon("#welcome").put(`Hello, ${save.load("user")}!`);
-```
-
----
-
-## **Files, Data, and URLs**  
-
-### **`up()`**  
-Uploads a file from the user.  
-```javascript
-up().then(file => bon("#fileName").put(file.name));
-```
-
-### **`down(content, filename)`**  
-Downloads content as a file.  
-```javascript
-down(bon("#myinput").text, "example.txt");
-```
-
-### **`url.set(query)`**  
-Updates the URL with query parameters.  
-```javascript
-url.set({ page: "home" });
-```
-
-### **`url.get()`**  
-Gets the current URL information.  
-```javascript
-bon("#urlInfo").put(url.get());
-```
-
----
-
-## **Talk to Your Server**  
-
-### **`server.post(url, data)`**  
-Sends data to the server.  
-```javascript
-server.post("/api/save", { name: "ISE" });
-```
-
-### **`server.get(url)`**  
-Gets data from the server.  
-```javascript
-server.get("/api/data").then(data => bon("#data").put(data));
-```
-
-### **`server.put(url, data)`**  
-Updates data on the server.  
-```javascript
-server.put("/api/update", { name: "New Name" });
-```
-
-### **`server.del(url)`**  
-Deletes data on the server.  
-```javascript
-server.del("/api/delete");
-```
-
----
-
-## **Extra's**  
-
-### **`uuid()`**  
-Generates a unique ID.  
-```javascript
-bon("#id").put(uuid());
-```
-
-### **`ran(max)`**  
-Gives a random number up to the max.  
-```javascript
-bon("#random").put(ran(100));
-```
-
-### **`copy(text)`**  
-Copies text to the clipboard.  
-```javascript
-copy("ISE is awesome!");
-```
-
-### **`rec.start()`**  
-Starts screen recording.  
-```javascript
-rec.start();
-```
-
-### **`rec.stop()`**  
-Stops recording and saves the file.  
-```javascript
-rec.stop();
-```
+This Markdown version matches the updated elements, attributes, and functions for ISE based on your description. Let me know if you need further modifications!
