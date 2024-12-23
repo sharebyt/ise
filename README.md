@@ -1,121 +1,156 @@
-<link rel="stylesheet" href="https://ise.web.app/load/l.css">
+
+<link rel='stylesheet' href='https://ise.web.app/v1.1/l.css'>  <!-- UI (MUST) -->
 
 # ISE (Interface Style Enliner) Documentation
 
-A Rework Programming Language for building interactive apps quickly and easily. 
-You don’t need to write JavaScript or Other like in other development.
+ISE is a language for building interactive software quickly, fast, native, web, with easy-to-use system. 
 
-ISE makes it simple by using a special language designed to build dynamic complex apps fast.
-This language is not Compiled or What.
+When you add this. Do not use it like JavaScript. We are different from normal JS as we use our own system.
 
-### **How to Use ISE in Your Project**
-
-To use ISE, just add the following code to your project:
-
+## Must include ISE in your project:
 ```html
-<script src="https://ise.web.app/load/l.js"></script>  <!-- This is the ISE script (MUST) -->
-<link rel="stylesheet" href="https://ise.web.app/load/l.css">  <!-- Optional UI (but it looks better with it) -->
+<script src="https://ise.web.app/load/l.js"></script>  <!-- CDN (MUST) -->
+<link rel='stylesheet' href='https://ise.web.app/load/l.css'>  <!-- UI (MUST) -->
+```
+
+ISE (Interface Style Enliner) is a redo-type language which means it is coded by using itself. ISE conbines C, JS, CSS, HTML, Markdown, and Sen UI to create ISE. ISE is a Native HTML-like language but also works as a CDN in your HTML project.
+
+### 3 Structure of ISE
+
+1. **`<app>`** - App Settings with JS-like syntax
+2. **`<body>`** - Where all UI will be put
+3. **`<script>`** - Where all scripting or other features will be coded
+
+---
+
+### Example
+
+1. **App Settings Example (`<app>`)**
+```html
+<app>
+    app.view();
+    app("My ISE app TITLE");
+    app.info("My first ISE app");
+    app.key("apple, fruit");
+    app.cover(1);
+    app.icon(1);
+</app>
+```
+
+2. **UI Example (`<body>`)**
+```html
+<body>
+    <see mid mbg center>
+        <bon>
+            <say b mid quick>code en</say>
+            <say b>What App is on your mind?</say>
+        </bon>
+    </see>
+</body>
+```
+
+3. **Script Example (`<script>`)**
+```html
+<script>
+    x = () => {}
+</script>
 ```
 
 ---
 
-## **What Elements Can You Use in ISE?**
+### Elements in ISE
 
-ISE gives you a set of easy-to-use elements to create your app. Here are the main ones:
-
-- `<see>`: Shows the main screen in the app.
-- `<say>`: Displays text in the app.
-- `<ask>`: Asks the user for input. (All data entered here is automatically saved.)
-- `<row>`: Creates a row layout in your app.
-- `<cam>`: Shows the camera display in the app.
-- `<bon>`: A "fluffy box" for any content you want to show.
-- `<app>`: Contains settings for your app.
-
----
-
-## **Adding Colors and Features to Your Elements**
-
-You can customize elements with colors and special features. Here’s how:
-
-- **Global Colors**: 
-  - `<see pop="COLOR">`: Changes the main color in your app.
-  - `<see min="COLOR">`: Changes the secondary color in your app.
-
-### **Colors You Can Use:**
-
-- **[r]** Red Cherry
-- **[l]** Blue Lin
-- **[y]** Yellow Mango
-- **[v]** Violet Grapes
-- **[p]** Pink Peach
-- **[g]** Green Grass
-- **[m]** Matte White
-- **[b]** Black
-
-To set a background color, use `+bg`. For example:
-
-```html
-<see pop="rbg">This text has a red background!</see>
-```
+- `<see>` - Screen in the App
+- `<say>` - Say text in the App
+- `<ask>` - Ask input in the App (auto-saved)
+- `<row>` - Row in the App
+- `<cam>` - Camera Display in the App
+- `<feed>` - Screen Display in the App
+- `<bon>` - Fluffy Box for the App
+- `<app>` - Creates an App Settings Container Element
 
 ---
 
-## **What Else Can You Do with ISE?**
+### Element Attributes
 
-Here’s a list of features and what they do. You can use these to control your app and make it work the way you want:
-
-### **Main Functions:**
-
-- `ui(1)`: Starts the UI for your app.
-- `bon('ask')`: Select an element (like an input box).
-- `bon.add('ask')`: Add a new input box to your app.
-
-### **Element Controls:**
-
-- `hide('#mysc')`: Hides an element (for example, a screen or section).
-- `.at('lbg')`: Change an element’s background.
-- `.rem('lbg')`: Remove a background from an element.
-- `.put`: Add an element inside another one.
-- `.del`: Remove an element from the app.
-
-### **Interacting with the Server:**
-
-You can send and get data from a server using these commands:
-
-- `server.post`: Send data to the server.
-- `server.put`: Update data on the server.
-- `server.patch`: Change specific data on the server.
-- `server.get`: Retrieve data from the server.
-- `server.del`: Delete data from the server.
-
-### **Camera and Microphone Controls:**
-
-- `on.cam`: Turn on the camera.
-- `off.cam`: Turn off the camera.
-- `on.mic`: Turn on the microphone.
-- `off.mic`: Turn off the microphone.
+- `<see pop='COLOR'>` - Sets Global Pop Color in the App
+- `<see min='COLOR'>` - Sets Global Mint Color in the App
+- `[pop]` - Make it a Pop Color
+- `[min]` - Make it a Mint Color
+- `[go='URL']` - Redirect to URL when tapped
+- `[do='JS']` - Runs JS when tapped or typed into it
+- `[save='mydata' file='txt']` - Creates a file with data from `<ask>` that is selected
+- `[upload='mydata']` - Uploads file data from `<ask>` that is selected
 
 ---
 
-## **App Settings**
+### Colors in ISE
 
-These functions let you customize your app’s settings, appearance, and make it more responsive.
+- `[r]` - Red Cherry
+- `[l]` - Blue Lin
+- `[y]` - Yellow Mango
+- `[v]` - Violet Grapes
+- `[p]` - Pink Peach
+- `[g]` - Green Grass
+- `[m]` - Matte White
+- `[b]` - Black
 
-- `app.view()`: Makes your app responsive (it will look good on all devices).
-- `app.info("My first ISE app")`: Set SEO settings for your app.
-- `app.key("apple, fruit")`: Add keywords for search engines.
-
-### **App Customization:**
-
-- `app("My App")`: Set the name of your app.
-- `app.icon(1)`: Choose an icon for your app.
-- `app.cover(1)`: Set a cover image for your app.
+Add `+[bg]` to make it a background color (e.g., `<? lbg>`).
 
 ---
 
-## **Final Notes**
+### Functionality in `<script>`
 
-With ISE, you don’t need to learn complex code. Just use the elements and commands to build your app visually. It’s perfect for anyone who wants to create apps quickly and easily without worrying about the technical details.
+#### Baseline Functions
+- `say('TEXT')` - Will tell the user with Baseline UI.
+- `ask('TEXT')` - Will ask (input) the user with Baseline UI.
+- `ui(1)` - Dynamically starts UI (auto).
+- `bon('ask')` - Select Element
+- `bon.add('ask')` - Makes Element
 
-Use the above elements and functions to start building your interactive app in no time!
+#### Hide/Attributes/Remove
+- `hide('#mysc')` - Toggle Hide
+- `.at('lbg')` - Toggle Attribute
+- `.rem('lbg')` - Remove Attribute
+- `.put(CHILD)` - Put Element as a Child
+- `.del(TARGET)` - Remove Element
 
+#### Servers
+- `server.post(url, {data})` - Post Data on Server
+- `server.put(url, {data})` - Put Data on Server
+- `server.patch(url, {data})` - Patch Data on Server
+- `server.get(url, {data})` - Get Data from Server
+- `server.del(url, {data})` - Delete Data from Server
+
+#### Hardware Functions
+- `on.cam()` - Turn on Camera
+- `off.cam()` - Turn off Camera
+- `on.feed()` - Turn on Screen Cast
+- `off.feed()` - Turn off Screen Cast
+- `on.mic()` - Turn on Mic
+- `off.mic()` - Turn off Mic
+- `snap('cam')` - Snap a Photo on Camera
+- `snap('feed')` - Screenshot the Display
+- `rec.start('cam')` - Record a Video of Camera
+- `rec.start('feed')` - Record a Video of Display
+- `rec.stop()` - Stop recording
+
+#### General Functions
+- `uuid()` - Generates a UUID
+- `ran(9e9)` - Generates a Random Number
+- `copy('Text')` - Will put data on User Clipboard
+- `key(['ctrl','c'], () => {})` - Event if key is clicked on keyboard
+
+#### Delayed Functions
+- `delay(() => { say('What') }, 1)` - Will run a function after the delay (in seconds).
+
+---
+
+### App Settings Functions
+
+- `app.view()` - Makes the App Responsive and Native
+- `app.info("My first ISE app")` - Sets SEO for App
+- `app.key("apple, fruit")` - Set App Settings Keywords
+- `app('My App')` - Set Name for App
+- `app.icon(1)` - Select Icon for App
+- `app.cover(1)` - Select Cover for App
