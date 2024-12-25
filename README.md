@@ -115,6 +115,10 @@ Add `+[bg]` to make it a background color (e.g., `<? lbg>`).
 - `.put(CHILD)` - Put Element as a Child
 - `.del(TARGET)` - Remove Element
 
+#### Local 
+- `local.set(name, data); ` - Set data from Local
+- `local.get(name);` - Get data from Local
+
 #### Servers
 - `server.post(url, {data})` - Post Data on Server
 - `server.put(url, {data})` - Put Data on Server
