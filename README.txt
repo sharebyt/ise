@@ -121,6 +121,15 @@ hide('#mysc')             <-- Toggle Hide
 .put(CHILD)               <-- Put Element as a Child
 .del(TARGET)              <-- Remove Element
 
+------------------------------------------------------------------
+
+Local
+
+local.set(name, data);         <-- Set data from Local
+local.get(name);               <-- Get data from Local
+
+------------------------------------------------------------------
+
 Servers
 
 server.post(url, {data})               <-- Post Data on Server
@@ -129,6 +138,7 @@ server.patch(url, {data})              <-- Patch Data on Server
 server.get(url, {data})                <-- Get Data from Server
 server.del(url, {data})                <-- Delete Data on Server
 
+------------------------------------------------------------------
 Hardware
 
 on.cam()                    <-- Turn on Camera
@@ -146,6 +156,8 @@ snap('feed')                <-- Screenshot the Display.
 rec.start('cam')            <-- Record a Video of Camera.
 rec.start('feed')           <-- Record a Video of Display.
 rec.stop()
+
+------------------------------------------------------------------
 
 General
 
