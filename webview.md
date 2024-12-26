@@ -1,5 +1,12 @@
 # Installation Guide for Running the Ise View Application
 
+
+## Notes
+- Ensure `set.txt` and `app.ise` are placed in the same directory as the executable.
+- For Android, include `set.txt` and `app.ise` as assets in the project.
+- Adjust paths in the code as necessary for your platform.
+- All files in `asset` folder `except app.c`.
+  
 ## 1. **Linux**
 
 ### Prerequisites
@@ -96,7 +103,3 @@ Ensure the following dependencies are installed:
 
 ---
 
-## Notes
-- Ensure `app.txt` and `app.ise` are placed in the same directory as the executable.
-- For Android, include `app.txt` and `app.ise` as assets in the project.
-- Adjust paths in the code as necessary for your platform.
