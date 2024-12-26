@@ -4,6 +4,7 @@
 # ISE (Interface Style Enliner) Documentation
 
 ISE is a language for building interactive software quickly, fast, native, web, with easy-to-use system. 
+This run because of C compiled webview system, [Read More](webview.md)
 
 When you add this. Do not use it like JavaScript. We are different from normal JS as we use our own system.
 
