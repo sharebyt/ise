@@ -1,10 +1,5 @@
-██╗███████╗███████╗
-██║██╔════╝██╔════╝
-██║███████╗█████╗  
-██║╚════██║██╔══╝  
-██║███████║███████╗
-╚═╝╚══════╝╚══════╝
-
+█ ▄█▀ █▀
+        ▀
 ISE (Interface Style Enliner) Documentation
 ________________________________________________________________
 
@@ -14,8 +9,8 @@ easy-to-use system.
 When you add this. Do not use it like its JavaScript. We are different from normal JS as we use our own system.
 
 Must include ISE in your project:
-<script src="https://ise.web.app/load/l.js"></script>  <-- CDN (MUST)
-<link rel='stylesheet' href='https://ise.web.app/load/l.css'>  <-- UI (MUST)
+<script src="https://ise.web.app/v1.7/l.js"></script>  <-- CDN (MUST)
+<link rel='stylesheet' href='https://ise.web.app/v1.7/l.css'>  <-- UI (MUST)
 
 ISE (Interface Style Enliner) is a redo type language which
 means it is coded by using it self. ISE uses C, JS, CSS, HTML,
