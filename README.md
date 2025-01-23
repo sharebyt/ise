@@ -10,8 +10,8 @@ When you add this. Do not use it like JavaScript. We are different from normal J
 
 ## Must include ISE in your project:
 ```html
-<script src="https://ise.web.app/load/l.js"></script>  <!-- CDN (MUST) -->
-<link rel='stylesheet' href='https://ise.web.app/load/l.css'>  <!-- UI (MUST) -->
+<script src="https://ise.web.app/v1.7/l.js"></script> 
+<link rel='stylesheet' href='https://ise.web.app/v1.7/l.css'>  
 ```
 
 ISE (Interface Style Enliner) is a redo-type language which means it is coded by using itself. ISE conbines C, JS, CSS, HTML, Markdown, and Sen UI to create ISE. ISE is a Native HTML-like language but also works as a CDN in your HTML project.
