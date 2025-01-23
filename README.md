@@ -1,5 +1,5 @@
 
-<link rel='stylesheet' href='https://ise.web.app/v1.1/l.css'>  <!-- UI (MUST) -->
+<link rel='stylesheet' href='https://ise.web.app/v1.7/l.css'>  <!-- UI (MUST) -->
 
 # ISE (Interface Style Enliner) Documentation
 
