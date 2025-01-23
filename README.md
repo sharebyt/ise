@@ -10,7 +10,8 @@ When you add this. Do not use it like JavaScript. We are different from normal J
 
 ## Must include ISE in your project:
 ```html
-<script src="https://ise.web.app/v1.7/l.js"></script> 
+<script src="https://ise.web.app/v1.7/l.js"></script>
+<script src="https://ise.web.app/v1.7/sen.js"></script> 
 <link rel='stylesheet' href='https://ise.web.app/v1.7/l.css'>  
 ```
 
