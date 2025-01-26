@@ -9,9 +9,17 @@ easy-to-use system.
 When you add this. Do not use it like its JavaScript. We are different from normal JS as we use our own system.
 
 Must include ISE in your project:
+<link rel='preload'as="style"
+href='https://ise.web.app/v1.7/l.css'>
+<link rel='preload'as="script"
+href='https://ise.web.app/v1.7/sen.js'>
+<link rel='preload'as="script"
+href='https://ise.web.app/v1.7/l.js'>
+<link rel='stylesheet' href='https://ise.web.app/v1.7/l.css'>
+
 <script src="https://ise.web.app/v1.7/l.js"></script>
 <script src="https://ise.web.app/v1.7/sen.js"></script> 
-<link rel='stylesheet' href='https://ise.web.app/v1.7/l.css'>
+
 
 ISE (Interface Style Enliner) is a redo type language which
 means it is coded by using it self. ISE uses C, JS, CSS, HTML,
