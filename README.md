@@ -1,6 +1,4 @@
 
-<link rel='stylesheet' href='https://ise.web.app/v1.7/l.css'>  <!-- UI (MUST) -->
-
 # ISE (Interface Style Enliner) Documentation
 
 ISE is a language for building interactive software quickly, fast, native, web, with easy-to-use system. 
