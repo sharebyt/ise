@@ -1,7 +1,7 @@
 <link rel='preload'as="style"
-href='https://ise.web.app/110/l.css'>
+href='https://actwu.github.io/neu/n.css'>
 
-<link rel='stylesheet' href='https://ise.web.app/110/l.css'>
+<link rel="stylesheet" href="https://actwu.github.io/neu/n.css"/>
 
 # ISE (Interface Style Enliner) Documentation
 
