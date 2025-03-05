@@ -1,3 +1,7 @@
+<link rel='preload'as="style"
+href='https://ise.web.app/110/l.css'>
+
+<link rel='stylesheet' href='https://ise.web.app/110/l.css'>
 
 # ISE (Interface Style Enliner) Documentation
 
@@ -9,16 +13,15 @@ When you add this. Do not use it like JavaScript. We are different from normal J
 ## Must include ISE in your project:
 ```html
 <link rel='preload'as="style"
-href='https://ise.web.app/v1.7/l.css'>
+href='https://ise.web.app/110/l.css'>
 <link rel='preload'as="script"
-href='https://ise.web.app/v1.7/sen.js'>
+href='https://ise.web.app/110/sen.js'>
 <link rel='preload'as="script"
-href='https://ise.web.app/v1.7/l.js'>
-<link rel='stylesheet' href='https://ise.web.app/v1.7/l.css'>
+href='https://ise.web.app/110/l.js'>
+<link rel='stylesheet' href='https://ise.web.app/110/l.css'>
 
-<script src="https://ise.web.app/v1.7/l.js"></script>
-<script src="https://ise.web.app/v1.7/sen.js"></script> 
-
+<script src="https://ise.web.app/110/sen.js"></script> 
+<script src="https://ise.web.app/110/l.js"></script>
 ```
 
 ISE (Interface Style Enliner) is a redo-type language which means it is coded by using itself. ISE conbines C, JS, CSS, HTML, Markdown, and Sen UI to create ISE. ISE is a Native HTML-like language but also works as a CDN in your HTML project.
@@ -36,7 +39,7 @@ ISE (Interface Style Enliner) is a redo-type language which means it is coded by
 1. **App Settings Example (`<app>`)**
 ```html
 <app>
-    app.view();
+    
     app("My ISE app TITLE");
     app.info("My first ISE app");
     app.key("apple, fruit");
@@ -160,7 +163,6 @@ Add `+[bg]` to make it a background color (e.g., `<? lbg>`).
 
 ### App Settings Functions
 
-- `app.view()` - Makes the App Responsive and Native
 - `app.info("My first ISE app")` - Sets SEO for App
 - `app.key("apple, fruit")` - Set App Settings Keywords
 - `app('My App')` - Set Name for App
